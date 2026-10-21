@@ -1,0 +1,1 @@
+Place your 12 previously saved PNG screenshots here using the filenames linked in README.md. Do not upload SSH private keys, passwords, or raw Lynis audit reports.

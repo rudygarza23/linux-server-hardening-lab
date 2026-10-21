@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="450" viewBox="0 0 1400 450" role="img" aria-labelledby="title desc">
+<title id="title">Linux Server Hardening Lab</title>
+<desc id="desc">Dark terminal-inspired banner reading Linux Server Hardening, Ubuntu Server 26.04.1 LTS, with icons for SSH, Firewall, Fail2ban, and Lynis audit.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0C1323"/><stop offset="1" stop-color="#17253A"/></linearGradient>
+ <linearGradient id="accent" x1="0" x2="1"><stop stop-color="#58B5EB"/><stop offset="1" stop-color="#C4F4FD"/></linearGradient>
+ <pattern id="grid" width="37" height="37" patternUnits="userSpaceOnUse"><path d="M37 0H0V37" fill="none" stroke="#23344B" stroke-width=".65" opacity=".55"/></pattern>
+ <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14"/></filter>
+</defs>
+<rect width="1400" height="450" fill="url(#bg)"/>
+<rect width="1400" height="450" fill="url(#grid)" opacity=".58"/>
+<circle cx="1160" cy="150" r="160" fill="#247CA4" opacity=".11" filter="url(#glow)"/>
+<rect x="35" y="29" width="1330" height="392" rx="13" fill="#0B1422" fill-opacity=".78" stroke="#44617C" stroke-width="2"/>
+<path d="M35 73H1365" stroke="#344C63" stroke-width="1.5"/>
+<circle cx="65" cy="51" r="7" fill="#E88383"/><circle cx="89" cy="51" r="7" fill="#E9C377"/><circle cx="113" cy="51" r="7" fill="#7AD0A2"/>
+<text x="1335" y="57" fill="#8EA7BD" font-family="Consolas, 'DejaVu Sans Mono', monospace" font-size="18" text-anchor="end">secure-shell / portfolio</text>
+<g font-family="Consolas, 'DejaVu Sans Mono', monospace">
+ <text x="87" y="115" font-size="21" fill="#77CBBE">$ sudo audit --system</text>
+ <text x="88" y="236" font-family="Arial, 'DejaVu Sans', sans-serif" font-size="116" font-weight="800" letter-spacing="13" fill="url(#accent)">LINUX</text>
+ <text x="91" y="288" font-size="33" font-weight="bold" letter-spacing="6" fill="#F1F5FA">SERVER HARDENING</text>
+ <path d="M90 313 H797" stroke="#426A85" stroke-width="2"/>
+ <text x="91" y="350" font-size="20" fill="#ACC4D7">UBUNTU SERVER 26.04.1 LTS</text>
+ <text x="91" y="384" font-size="17" fill="#7CC4C5">BLUE TEAM  /  SYSTEM SECURITY  /  AUDIT EVIDENCE</text>
+</g>
+<g transform="translate(962 117)" font-family="Consolas, 'DejaVu Sans Mono', monospace">
+ <rect width="324" height="223" rx="11" fill="#14283A" stroke="#446D81" stroke-width="1.5"/>
+ <text x="24" y="39" font-size="18" fill="#C7D9E8">VERIFIED CONTROLS</text>
+ <g font-size="19" fill="#A5E9CD"><text x="25" y="84">[✓] SSH / ED25519</text><text x="25" y="121">[✓] UFW FIREWALL</text><text x="25" y="158">[✓] FAIL2BAN / SSHD</text><text x="25" y="195">[✓] LYNIS AUDIT</text></g>
+</g>
+<path d="M844 147h68m-34 -5v10" stroke="#45677A" stroke-width="2"/>
+</svg>
