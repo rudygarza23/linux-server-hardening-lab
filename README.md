@@ -25,6 +25,87 @@ The work was performed in an isolated **VirtualBox lab**, administered primarily
 
 > **Project outcome:** Lynis Hardening Index improved from **60 to 64** (+4 points). The final audit detected both firewall and intrusion-prevention software where neither was detected in the initial audit. A Lynis score is **not** a percentage measure of security or proof that all vulnerabilities are resolved.
 
+## Security evidence / screenshots
+
+**All 12 screenshots are displayed below, directly in this README.** The images document configuration and testing rather than installation screens alone.
+
+<table>
+<tr>
+<td width="50%" align="center">
+<strong>01 · Ubuntu Server baseline</strong><br/>
+<img src="screenshots/01-ubuntu-server-baseline.png" alt="01: Ubuntu Server baseline" width="100%"/>
+<br/><sub>System identity and network verified</sub>
+</td>
+<td width="50%" align="center">
+<strong>02 · System patching</strong><br/>
+<img src="screenshots/02-system-updated-new-kernel.png" alt="02: System patching" width="100%"/>
+<br/><sub>Updated Linux kernel verified</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<strong>03 · Least-privilege accounts</strong><br/>
+<img src="screenshots/03-linux-least-privilege-access-control.png" alt="03: Least-privilege accounts" width="100%"/>
+<br/><sub>Admin and standard-user access compared</sub>
+</td>
+<td width="50%" align="center">
+<strong>04 · Directory permissions</strong><br/>
+<img src="screenshots/04-linux-file-permissions-security.png" alt="04: Directory permissions" width="100%"/>
+<br/><sub>chmod 700 and denied access</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<strong>05 · File ownership</strong><br/>
+<img src="screenshots/05-linux-file-ownership-security.png" alt="05: File ownership" width="100%"/>
+<br/><sub>Root-owned file protected from writes</sub>
+</td>
+<td width="50%" align="center">
+<strong>06 · SSH remote access</strong><br/>
+<img src="screenshots/06-ssh-remote-administration.png" alt="06: SSH remote access" width="100%"/>
+<br/><sub>Windows PowerShell connection to Ubuntu</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<strong>07 · Lynis baseline</strong><br/>
+<img src="screenshots/07-lynis-initial-security-audit.png" alt="07: Lynis baseline" width="100%"/>
+<br/><sub>Initial Hardening Index: 60</sub>
+</td>
+<td width="50%" align="center">
+<strong>08 · UFW firewall</strong><br/>
+<img src="screenshots/08-ufw-firewall-security.png" alt="08: UFW firewall" width="100%"/>
+<br/><sub>Default-deny inbound firewall</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<strong>09 · SSH key authentication</strong><br/>
+<img src="screenshots/09-ssh-key-authentication.png" alt="09: SSH key authentication" width="100%"/>
+<br/><sub>ED25519 authentication verified</sub>
+</td>
+<td width="50%" align="center">
+<strong>10 · SSH server hardening</strong><br/>
+<img src="screenshots/10-ssh-server-hardening.png" alt="10: SSH server hardening" width="100%"/>
+<br/><sub>Direct root SSH login disabled</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<strong>11 · Fail2ban monitoring</strong><br/>
+<img src="screenshots/11-fail2ban-ssh-protection.png" alt="11: Fail2ban monitoring" width="100%"/>
+<br/><sub>SSH jail and nftables action</sub>
+</td>
+<td width="50%" align="center">
+<strong>12 · Lynis comparison</strong><br/>
+<img src="screenshots/12-lynis-security-audit-comparison.png" alt="12: Lynis comparison" width="100%"/>
+<br/><sub>Final Hardening Index: 64</sub>
+</td>
+</tr>
+</table>
+
+> **Evidence note:** Each image is from the lab environment. No private SSH keys, passwords, or raw audit reports are included.
+
 ## Lab environment
 
 | Component | Implementation |
@@ -112,42 +193,6 @@ sudo grep -H '^hardening_index=' ~/security-lab/lynis-*-report.dat
 ```
 
 The first command performs the audit. The second reads the score from each preserved report. Audit files were stored inside the server's protected lab directory and were not committed to this repository.
-
-</details>
-
-## Security evidence / screenshots
-
-The screenshots below show **configuration and verification**, rather than installation screens alone. Click any link to open the original evidence image.
-
-| # | Screenshot | Technical proof |
-|---|---|---|
-| 01 | [Ubuntu baseline](screenshots/01-ubuntu-server-baseline.png) | Server identity and networking verified |
-| 02 | [Patching and kernel](screenshots/02-system-updated-new-kernel.png) | Updated kernel loaded after reboot |
-| 03 | [Least privilege](screenshots/03-linux-least-privilege-access-control.png) | Standard user denied sudo authorization |
-| 04 | [Directory access](screenshots/04-linux-file-permissions-security.png) | `chmod 700` and denied directory access |
-| 05 | [Ownership protection](screenshots/05-linux-file-ownership-security.png) | Root-owned file modification denied |
-| 06 | [Remote administration](screenshots/06-ssh-remote-administration.png) | Windows-to-Ubuntu SSH session verified |
-| 07 | [Initial Lynis audit](screenshots/07-lynis-initial-security-audit.png) | Initial score of 60 and uncovered controls |
-| 08 | [UFW firewall](screenshots/08-ufw-firewall-security.png) | Active default-deny firewall and SSH allowance |
-| 09 | [SSH key authentication](screenshots/09-ssh-key-authentication.png) | ED25519 authentication without password fallback for test connection |
-| 10 | [SSH hardening](screenshots/10-ssh-server-hardening.png) | `PermitRootLogin no` and effective SSH settings |
-| 11 | [Fail2ban](screenshots/11-fail2ban-ssh-protection.png) | `sshd` jail, journal matches, and nftables action |
-| 12 | [Lynis comparison](screenshots/12-lynis-security-audit-comparison.png) | Verified score progression, 60 → 64 |
-
-<details>
-<summary><strong>Open a visual sample of the SSH and firewall evidence</strong></summary>
-
-**SSH key authentication**
-
-![ED25519 SSH authentication evidence](screenshots/09-ssh-key-authentication.png)
-
-**UFW firewall controls**
-
-![UFW configuration evidence](screenshots/08-ufw-firewall-security.png)
-
-**Fail2ban monitoring**
-
-![Fail2ban SSH jail evidence](screenshots/11-fail2ban-ssh-protection.png)
 
 </details>
 
