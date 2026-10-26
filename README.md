@@ -243,10 +243,6 @@ A credible security project documents what **has not** been resolved:
 
 `Linux Administration` · `System Hardening` · `Least Privilege` · `IAM` · `SSH / ED25519` · `UFW` · `Fail2ban` · `nftables` · `Patch Management` · `journald` · `Lynis` · `Security Assessment` · `Technical Documentation`
 
-## Resume-ready project bullet
-
-> Built and hardened an Ubuntu Server 26.04 LTS virtual machine by configuring least-privilege user access, restrictive file permissions, ED25519 SSH authentication, UFW firewall rules, Fail2ban SSH monitoring, automatic security updates, and logging. Conducted before-and-after Lynis assessments and improved the Hardening Index from 60 to 64, documenting verified controls and remaining risks.
-
 ## Scope and responsible disclosure
 
 This is a **personal defensive-security training lab**, not a production environment. No internet-facing SSH service or adversarial testing is implied. Credentials, private SSH keys, and raw system-audit artifacts are intentionally excluded from this public repository.
